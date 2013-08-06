@@ -1,0 +1,119 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/sortable-table.css" />
+<link rel="stylesheet" href="css/accordion-test.css" />
+<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en">
+
+<title> Sortable Table | Rife Group</title>
+
+<script>
+$(function() {
+  $( ".accordion" ).accordion({
+      collapsible: true
+  });
+});
+    
+$(function() {
+  $( ".sortable" ).sortable();
+    $( ".sortable" ).disableSelection();
+  $( ".sortable" ).sortable({containment: ".container"});
+});
+
+$(function() {
+    $( ".each" ).sortable();
+    $( ".each" ).disableSelection();
+  $( ".each" ).sortable({containment: ".container"});
+});
+
+$(function() {
+    $( "ol#droptrue" ).sortable({
+    connectWith: "ol"
+    });
+    
+    $("#draggable").draggable({
+      connectToSortable: ".each",
+      helper: "clone",
+      revert: "invalid"  });
+
+});
+
+</script>
+  
+</head>
+<body>
+
+<div class="wrap">
+	<div class="main-wrapper">
+    	<div class="main-form">
+        	<div class="content">
+            	<div class="cont-container">
+                
+                <!--Table Begins-->
+                <div class="table-container">
+                    <div class="table-cont">
+                        <div class="container">
+                           <div class="sortable">
+                               <div class="accordion">
+                                   <h5>Table</h5>
+                                        <div>
+                                           <ol class="each" id="droptrue">
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                           </ol>
+                                        </div>
+                                </div>
+                        
+                                <div class="accordion">
+                                   <h5>Table</h5>
+                                        <div>
+                                           <ol class="each" id="droptrue">
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                           </ol>
+                                        </div>
+                                </div>
+                        
+                                <div class="accordion">
+                                   <h5>Table</h5>
+                                        <div>
+                                           <ol class="each" id="droptrue">
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                           </ol>
+                                        </div>
+                                </div>
+                        
+                                <div class="accordion">
+                                   <h5>Table</h5>
+                                        <div>
+                                           <ol class="each" id="droptrue">
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                                <li><input type="text" /><span class="ui-icon ui-icon-arrowthick-2-n-s"></span></li>
+                                           </ol>
+                                        </div>
+                                </div>
+                            </div><!--sortable-->
+                        </div><!--Container-->
+                    </div>
+                </div><!--END TABLE-->
+				
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+</body>
+</html>
